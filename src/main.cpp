@@ -4,9 +4,12 @@
 int main()
 {
     display win(40, 20);
+    
 
 
-    int n = 4;
+
+
+    int n = 200;
     std::vector<object> dot(n);
     for(int i = 0; i < n; ++i)
     {
@@ -14,8 +17,11 @@ int main()
     }
 
     float time = 0;
+
     while(true)
     {
+
+        
         for(int i = 0; i < n; ++i)
         {
             for(int j = 0; j < n; ++j)
@@ -31,8 +37,9 @@ int main()
         {
             dot[i].next_tick();
         }
+        
         time += TICK;
-
+        
         win.clear();
         for(int i = 0; i < n; ++i)
         {
@@ -40,13 +47,15 @@ int main()
             int y = (dot[i].y - ROOM_MIN_Y) / ((ROOM_MAX_Y - ROOM_MIN_Y) / win.Heigh);
             win.add(x, y); 
         }
+        
         win.print();
         std::cout << time << '\n';
+        // _sleep(1);
        
         // std::cout << dot[0].x << ' ' << dot[0].y << '\n';
         // std::cout << dot[1].x << ' ' << dot[1].y << '\n';
 
-        // sleep(1);
+        //sleep(1);
     }
 
     

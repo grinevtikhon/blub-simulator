@@ -11,12 +11,13 @@ display::display(int x, int y)
 
 void display::print()
 {
-    system("clear");
+    system("cls");
+    //sleep(19);
     for(int y = Heigh - 1; y >= 0; --y)
     {
         for(int x = 0; x < Length; ++x)
         {
-            std::cout << gradient[std::min(mat[x][y], (int)gradient.size() - 1)];
+            std::cout << gradient[std::min(mat[x][y] , (int)gradient.size() - 1)];
         }
         std::cout << '\n';
     }

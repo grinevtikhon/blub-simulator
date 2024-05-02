@@ -10,7 +10,15 @@ float force_function(float dist)
     {
         return 0;
     }
-    return 100 / (dist * dist);
+
+    if (dist < 60)
+    {
+        return -dist;
+    }
+    else {
+        return 2 * dist * dist;
+    }
+    return 1 * dist * dist;
 }
 
 object::object()

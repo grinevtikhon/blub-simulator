@@ -7,8 +7,8 @@ const int ROOM_MIN_Y = 0;
 
 const float EPS = 1;
 
-const float TICK = 1e-1;
-const float ALPHA = 1e-2;
+const float TICK = 9e-4;
+const float ALPHA = 3;
 
 float force_function(float dist);
 
